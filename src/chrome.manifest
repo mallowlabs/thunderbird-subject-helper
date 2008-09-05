@@ -1,0 +1,2 @@
+content  subjecthelper  content/
+overlay  chrome://messenger/content/messengercompose/messengercompose.xul  chrome://subjecthelper/content/overlay.xul

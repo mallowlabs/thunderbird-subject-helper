@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <textbox id="msgSubject">
+    <button popup="_child" type="menu" id="subject-helper-button"
+     style="-moz-binding: url('chrome://subjecthelper/content/subjectHelper.xml#subjectHelper');">
+      <menupopup>
+        <script><![CDATA[
+        function subjectHelperCommand(event) {
+            var msgSubject = document.getElementById("msgSubject");
+            msgSubject.value = event.label + "：" + msgSubject.value;
+            msgSubject.focus();
+            gContentChanged=true;
+            SetComposeWindowTitle();
+        }
+        ]]></script>
+        <menuitem label="回答" accesskey="R" oncommand="subjectHelperCommand(this);"/>
+        <menuitem label="返不要" accesskey="U" oncommand="subjectHelperCommand(this);"/>
+        <menuitem label="送付" accesskey="T" oncommand="subjectHelperCommand(this);"/>
+        <menuitem label="質問" accesskey="Q" oncommand="subjectHelperCommand(this);"/>
+        <menuitem label="保存" accesskey="S" oncommand="subjectHelperCommand(this);"/>
+        <menuitem label="参考" accesskey="F" oncommand="subjectHelperCommand(this);"/>
+        <menuitem label="案内" accesskey="I" oncommand="subjectHelperCommand(this);"/>
+        <menuitem label="要返信" accesskey="N" oncommand="subjectHelperCommand(this);"/>
+        <menuitem label="草案" accesskey="D" oncommand="subjectHelperCommand(this);"/>
+        <menuitem label="迄" accesskey="L" oncommand="subjectHelperCommand(this);"/>
+      </menupopup>
+    </button>
+  </textbox>
+</overlay>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<bindings id="subjectHelperBindings"
+   xmlns="http://www.mozilla.org/xbl"
+   xmlns:html="http://www.w3.org/1999/xhtml"
+   xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   xmlns:xbl="http://www.mozilla.org/xbl">
+
+  <binding id="subjectHelper">
+    <resources>
+      <stylesheet src="chrome://subjecthelper/content/subjectHelper.css"/>
+    </resources>
+    <content popup="_child">
+      <children/>
+      <xul:stack flex="1">
+        <xul:hbox align="center">
+          <xul:image class="subject-helper-button-image" xbl:inherits="src"/>
+        </xul:hbox>
+        <xul:hbox align="center">
+          <xul:image class="subject-helper-button-dropmarker"/>
+        </xul:hbox>
+      </xul:stack>
+    </content>  
+  </binding>
+
+</bindings>
